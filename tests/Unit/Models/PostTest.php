@@ -21,4 +21,17 @@ class PostTest extends TestCase
         ]);
         $this->assertEquals('https://external-blog.com/page', $post->promotional_url);
     }
+
+    public function it_can_replace_image_tags_with_responsive_images()
+    {
+        $post = factory(Post::class)->create([
+            'text' => 'no images'
+        ]);
+        $this->assertEquals('no images', $post->text);
+
+        $post = factory(Post::class)->create([
+           'text' => "image 1 [image('test/image1.png')] image 2 [image('test/image2.png']",
+        ]);
+        $this->assertEquals('parsed images', $post->text);
+    }
 }

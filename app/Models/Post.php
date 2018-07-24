@@ -47,7 +47,24 @@ class Post extends BaseModel implements Feedable
 
     public function getTextAttribute($original)
     {
-        return (new Parsedown())->text($original);
+        $html = (new Parsedown())->text($original);
+
+        // {{ image('/subject/image-name.jpg') }}
+
+        $imagesPaths = [];
+
+        collect($imagesPaths)
+            ->unique()
+            ->map(function (string $imagePath) {
+                return [$imagePath => image($imagePath)];
+            })
+            ->eachSpread(function (string $imagePath, string $imageHtml) use ($html) {
+                $originalHtml = "{{ image('{$imagePath}') }}";
+
+                str_replace($originalHtml, $imageHtml);
+            });
+
+        return $html;
     }
 
     public function getMarkdownAttribute()
@@ -84,7 +101,7 @@ class Post extends BaseModel implements Feedable
     protected function publishOnSocialMedia()
     {
         if (!$this->tweet_sent) {
-            if (! $this->concernsTweet()) {
+            if (!$this->concernsTweet()) {
                 dispatch(new SendTweet($this));
 
                 $this->tweet_sent = true;
@@ -116,7 +133,7 @@ class Post extends BaseModel implements Feedable
 
     public function toSearchableArray(): array
     {
-        if (! $this->published) {
+        if (!$this->published) {
             return [];
         }
 
@@ -180,7 +197,7 @@ class Post extends BaseModel implements Feedable
 
     public function getPromotionalUrlAttribute(): string
     {
-        if (! empty($this->external_url)) {
+        if (!empty($this->external_url)) {
             return $this->external_url;
         }
 
