@@ -1,15 +1,15 @@
 <?php
 
-Route::get('newsletter', 'NewsletterController@index');
 Route::get('confirm-your-email', 'NewsletterController@confirm');
 Route::get('subscribed', 'NewsletterController@subscribed');
 
 Route::feeds();
 Route::get('/', 'HomeController@index');
-Route::get('/originals', 'OriginalsController@index');
+Route::get('/projects', 'ProjectController@index');
+Route::get('/about-me', 'AboutMeController@index');
+Route::get('/contact-me', 'ContactMeController@index');
+Route::get('/blog', 'BlogController@index');
 Route::get('tag/{tagSlug}', 'TaggedPostsController@index');
-Route::get('me', 'MeController@index');
-Route::view('advertising', 'front.advertising.index');
 
 Route::get('payments', 'PaymentsController@index');
 Route::post('payments/set-amount', 'PaymentsController@setAmount');

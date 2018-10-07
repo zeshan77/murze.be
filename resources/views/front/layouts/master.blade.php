@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     @include('feed::links')
-    <title>@yield('title') - Freek Van der Herten's blog on PHP and Laravel</title>
+    <title>@yield('title') - Zeshan Khattak PHP and Laravel blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
     @include('front.layouts._partials.seo')
@@ -28,21 +28,15 @@
         </main>
 
         <div class="lg:w-1/4">
-            @include('front.layouts._partials.newsletter')
-            {{-- @include('front.layouts._partials.larajobs') --}}
-            @include('front.layouts._partials.carbon')
+            {{--            @include('front.layouts._partials.newsletter')--}}
         </div>
-
 
     </div>
 
     <footer class="px-4 mx-auto border-t py-6 mt-6 text-center text-sm sm:text-base">
-        <a href="https://twitter.com/freekmurze">@freekmurze</a>
-        &nbsp; • &nbsp;
-        <a href="/feed" data-turbolinks="false">RSS</a>
-        &nbsp; • &nbsp;
-        <a href="/advertising">Advertising</a>
+        <a href="https://twitter.com/zeshan" target="_blank">@zeshan</a>
     </footer>
+
 </div>
 </body>
 </html>

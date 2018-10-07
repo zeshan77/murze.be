@@ -15,10 +15,10 @@ class NavigationServiceProvider extends ServiceProvider
                 ->addClass('list-reset lg:flex justify-end items-center')
                 ->addItemClass('block border-b-2 border-transparent py-2 px-4 text-center align-content-center lg:mx-2')
                 ->action('Front\HomeController@index', 'Home')
-                ->action('Front\OriginalsController@index', 'Originals')
-                ->action('Front\NewsletterController@index', 'Newsletter')
-                ->url('/advertising', 'Advertising')
-                ->action('Front\MeController@index', 'Me')
+                ->action('Front\ProjectController@index', 'Projects')
+                ->action('Front\AboutMeController@index', 'About')
+                ->action('Front\ContactMeController@index', 'Contact')
+                ->action('Front\BlogController@index', 'Blog')
                 ->add(View::create('front.layouts._partials.search')->addParentClass('w-full items-center mt-4 lg:mt-0'))
                 ->setActiveFromRequest('/');
         });

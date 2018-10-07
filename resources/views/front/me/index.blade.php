@@ -39,6 +39,5 @@
         I love public speaking and try to do it a lot. Here's a list of past user group meetups and conferences where I had the pleasure of speaking.
     </p>
 
-    @include('front.me._partials.talks')
 @endsection
 
