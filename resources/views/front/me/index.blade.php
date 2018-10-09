@@ -6,7 +6,7 @@
 
     <h1 class="pb-4 border-b">About me</h1>
 
-    @include('front.me._partials.freek')
+    @include('front.me._partials.zeshan')
 
     <p>
         I live in Antwerp, Belgium and am passionate about PHP. I'm a Laravel enthusiast and have used

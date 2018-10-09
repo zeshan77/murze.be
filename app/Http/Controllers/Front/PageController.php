@@ -3,14 +3,16 @@
 namespace App\Http\Controllers\Front;
 
 use App\Page;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ContactMeController extends Controller
+class PageController extends Controller
 {
-    public function index()
+    public function detail($slug)
     {
-        $page = Page::page('contact-me')->first();
+        if(!$page = Page::whereSlug($slug)->first()) {
+            abort(404);
+        }
+
         return view('front.pages.detail', compact('page'));
     }
 }

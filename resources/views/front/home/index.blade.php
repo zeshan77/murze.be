@@ -3,16 +3,12 @@
 @section('title', 'Home')
 
 @section('content')
+    <h1 class="pb-4 border-b">Hi,</h1>
 
-    @if($onFirstPage)
-        <h1>Recent blog entries</h1>
-    @else
-        <div class="pb-4">
-            {{ $posts->links() }}
-        </div>
-    @endif
+    @include('front.me._partials.zeshan')
 
-    @include('front.posts._partials.list')
+    <p> {!! $page->content !!} </p>
 
-    {{ $posts->links() }}
+    <i class="fab fa-linkedin"></i>
+
 @endsection

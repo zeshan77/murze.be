@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers\Front;
 
-use Illuminate\Http\Request;
+use App\Page;
 use App\Http\Controllers\Controller;
 
 class AboutMeController extends Controller
 {
     public function index()
     {
-        return view('front.about.index');
+        $page = Page::page('about-me')->first();
+        return view('front.pages.detail', compact('page'));
     }
+
 }

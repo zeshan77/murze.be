@@ -18,8 +18,6 @@ class NavigationServiceProvider extends ServiceProvider
                 ->action('Front\ProjectController@index', 'Projects')
                 ->action('Front\AboutMeController@index', 'About')
                 ->action('Front\ContactMeController@index', 'Contact')
-                ->action('Front\BlogController@index', 'Blog')
-                ->add(View::create('front.layouts._partials.search')->addParentClass('w-full items-center mt-4 lg:mt-0'))
                 ->setActiveFromRequest('/');
         });
 
@@ -28,7 +26,8 @@ class NavigationServiceProvider extends ServiceProvider
                 ->addClass('list-reset flex flex-col lg:flex-row justify-end items-center mb-8')
                 ->addItemClass('block rounded py-2 text-center align-content-center mx-6')
                 ->action('Back\PostsController@index', 'Posts')
-                ->action('Back\NewsletterGeneratorController@index', 'Newsletter')
+                ->action('Back\PageController@index', 'Pages')
+                ->action('Back\ProjectController@index', 'Projects')
                 ->view('back.layouts._partials.logout')
                 ->setActiveFromRequest('/');
         });
