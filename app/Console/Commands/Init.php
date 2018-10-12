@@ -35,14 +35,9 @@ class Init extends Command
         Artisan::call('migrate');
         $this->info('Tables migrated.');
 
-        if(!User::whereEmail('zeshan77@gmail.com')->first()) {
-            $this->info('Creating user.');
-            $user = factory(User::class)->create([
-                'email' => 'zeshan77@gmail.com',
-                'name' => 'Zeshan Khattak'
-            ]);
-            $this->info("User {$user->email} created.");
-        }
+        $this->info('Seeding data.');
+        Artisan::call('db:seed');
+        $this->info('Seeding finished.');
 
 
     }

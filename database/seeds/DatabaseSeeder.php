@@ -8,9 +8,7 @@ class DatabaseSeeder extends Seeder
     {
         $this
            ->call(UserSeeder::class)
-           ->call(TagSeeder::class)
-           ->call(PostSeeder::class)
-           ->call(TalkSeeder::class)
-           ->call(AdSeeder::class);
+            ->call(PageSeeder::class)
+            ->call(ProjectSeeder::class);
     }
 }
