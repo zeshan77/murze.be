@@ -36,7 +36,7 @@ class PageSeeder extends Seeder
 
     private function contactMeContent()
     {
-        return 'I can be contacted on [twitter](https://twitter.com/zeshan), [linkedin](https://www.linkedin.com/in/zeshankhattak/).
+        return 'I can be contacted on [twitter](https://twitter.com/zeshan) and [linkedin](https://www.linkedin.com/in/zeshankhattak/).
 
 
 You can see my coding style on [Github](https://github.com/zeshan77) to get some feeling how I code ;)';
