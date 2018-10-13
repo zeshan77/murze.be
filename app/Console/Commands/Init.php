@@ -32,7 +32,7 @@ class Init extends Command
     public function handle()
     {
         $this->info('Migrating tables.');
-        Artisan::call('migrate');
+        Artisan::call('migrate:fresh');
         $this->info('Tables migrated.');
 
         $this->info('Seeding data.');

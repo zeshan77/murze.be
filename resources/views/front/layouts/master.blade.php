@@ -29,8 +29,9 @@
     </div>
 
     <footer class="px-4 mx-auto border-t py-6 mt-6 text-center text-sm sm:text-base">
-        <a href="https://twitter.com/zeshan" target="_blank">@zeshan</a> &nbsp;
-        <a href="https://github.com/zeshan77" target="_blank">Github</a>
+        <a href="https://twitter.com/zeshan" target="_blank">@zeshan</a> -
+        <a href="https://github.com/zeshan77" target="_blank">Github</a> -
+        <a href="https://www.linkedin.com/in/zeshankhattak/" target="_blank">Linkedin</a>
     </footer>
 
 </div>
