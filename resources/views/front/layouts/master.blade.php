@@ -1,7 +1,6 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    @include('feed::links')
     <title>@yield('title') - Zeshan Khattak PHP and Laravel blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
