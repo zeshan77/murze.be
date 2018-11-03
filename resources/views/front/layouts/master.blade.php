@@ -11,6 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script defer src="{{ mix('js/front.js') }}"></script>
     <link rel="prefetch" href="/js/highlight.js" as="script">
+    <meta name="google-site-verification" content="5zEG0zsUBXWQmIGM_3FLkojPHg5o6dWIKYRH39tb83Y" />
 </head>
 <body>
 @include('front.layouts._partials.analytics')
