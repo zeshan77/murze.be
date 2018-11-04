@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\FetchGithubActivity;
 use App\Console\Commands\GenerateSitemap;
 use App\Console\Commands\Init;
 use Illuminate\Console\Scheduling\Schedule;
@@ -11,7 +12,8 @@ class Kernel extends ConsoleKernel
 {
     protected $commands = [
         Init::class,
-        GenerateSitemap::class
+        GenerateSitemap::class,
+        FetchGithubActivity::class
     ];
 
     protected function schedule(Schedule $schedule)
