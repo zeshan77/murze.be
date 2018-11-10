@@ -2,17 +2,25 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Models\Post;
-use App\Models\Talk;
 use App\Page;
+use App\Services\GithubService;
 use Illuminate\Routing\Controller;
 
 class HomeController extends Controller
 {
-    public function index()
+    /**
+     * @param GithubService $githubService
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Exception
+     */
+    public function index(GithubService $githubService)
     {
-        $page = Page::whereSlug('home')->first();
-        return view('front.home.index', compact('page'));
+        $data = [
+            'page' => Page::whereSlug('home')->first(),
+            'githubEvents' => $githubService->recent(),
+            'mapGithubEvents' => $githubService->mapEvents()
+        ];
+        return view('front.home.index', $data);
     }
 
 }

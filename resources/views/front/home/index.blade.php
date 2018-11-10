@@ -1,4 +1,4 @@
-@extends('front.layouts.master')
+@extends('front.layouts.twocolumns')
 
 @section('title', 'Home')
 

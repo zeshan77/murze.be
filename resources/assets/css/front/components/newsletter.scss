@@ -1,3 +1,7 @@
 .newsletter-box {
-    @apply .flex .flex-col .content-center .self-start .bg-white .border-2 .rounded .mb-4 .py-4 .px-4 .text-xs .leading-normal .text-grey-dark;
+    @apply .flex .flex-col .content-center .self-start .bg-white .border-2 .rounded .mb-4 .py-4 .px-3 .text-xs .leading-normal .text-grey-dark;
+}
+
+.newsletter-box li {
+    @apply .py-2;
 }

@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\GithubEvent;
-use App\Services\Github\FetchGithubService;
+use App\Services\Webhooks\Github\FetchGithubService;
 use Illuminate\Console\Command;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Log;

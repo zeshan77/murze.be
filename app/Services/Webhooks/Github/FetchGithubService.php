@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Github;
+namespace App\Services\Webhooks\Github;
 
 use GuzzleHttp\Client as HttpClient;
 
