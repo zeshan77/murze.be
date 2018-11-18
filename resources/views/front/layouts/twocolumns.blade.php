@@ -21,7 +21,6 @@
     </header>
 
     <div class="flex flex-col lg:flex-row">
-
         <main class="lg:w-3/4 lg:mr-4">
             @include('back.layouts._partials.flashMessage')
             @yield('content')
@@ -29,7 +28,7 @@
 
         <div class="lg:w-1/4">
             <div class="newsletter-box">
-                <strong>Github activities</strong>
+                <strong>Github recent activities</strong>
                 <ul>
                     @if($githubEvents->count())
                         @foreach($githubEvents as $event)
@@ -45,6 +44,24 @@
                     @endif
                 </ul>
 
+            </div>
+            <div class="newsletter-box">
+                <strong>Twitter recent feeds</strong>
+                <ul>
+                    @if($twitterEvents->count())
+                        @foreach($twitterEvents as $feed)
+                            <li>
+                                {{  \Carbon\Carbon::parse($feed->created_at->date)->diffForHumans() }} <br>
+                                {{ str_limit($feed->text, 100) }} <br>
+                                <a href="https://twitter.com/zeshan/status/{{ $feed->id }}" target="_blank">View
+                                    tweet</a>
+                                <br>
+                            </li>
+                        @endforeach
+                    @else
+                        <li>No recent activities -:)</li>
+                    @endif
+                </ul>
             </div>
         </div>
     </div>

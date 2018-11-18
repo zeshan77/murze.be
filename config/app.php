@@ -2,6 +2,15 @@
 
 return [
 
+    // Twitter
+    'twitter' => [
+        'consumer_api_key' => env('TWITTER_CONSUME_API_KEY'),
+        'consumer_api_secret_key' => env('TWITTER_CONSUMER_API_SECRET_KEY'),
+        'access_token' => env('TWITTER_ACCESS_TOKEN'),
+        'access_token_secret' => env('TWITTER_ACCESS_TOKEN_SECRET')
+    ],
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

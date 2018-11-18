@@ -1,5 +1,4 @@
 <?php
-
 Route::feeds();
 Route::get('/', 'HomeController@index');
 Route::get('/projects', 'ProjectController@index');
