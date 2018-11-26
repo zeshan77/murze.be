@@ -17,15 +17,21 @@
 
 @tailwind utilities;
 
- .grid {
-   display: grid;
-   grid-template-columns: 33% 33% 33%;
- }
-.grid > .item {
-  padding: 20px;
-  background: #F1F1F1;
+@media screen and (min-width: 985px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+  .grid > .item {
+    padding: 20px;
+    background: #F1F1F1;
+  }
+  .grid li:nth-child(3n+3) {
+    margin-right: 0;
+  }
 }
-.grid li:nth-child(3n+3) {
-  margin-right: 0;
+
+.grid li > p {
+  text-align: justify;
 }
 
