@@ -14,7 +14,7 @@
             <div class="flex justify-between items-start px-6 py-2 border-b border-grey-lighter">
                 <div>
                     <div>
-                        <a href="{{ action('Back\PostsController@edit', $post->id) }}">{{ $post->title }}</a>
+                        <a href="{{ action('Back\PostsController@edit', $post->slug) }}">{{ $post->title }}</a>
                     </div>
                     <div class="text-xs text-grey font-medium">
                         {{ $post->publish_date }}

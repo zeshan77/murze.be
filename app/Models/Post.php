@@ -32,6 +32,11 @@ class Post extends BaseModel implements Feedable
         'original_content' => 'boolean'
     ];
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
@@ -73,7 +78,7 @@ class Post extends BaseModel implements Feedable
         $this->syncTags($tags);
 
         if ($this->published) {
-            $this->publishOnSocialMedia();
+            //$this->publishOnSocialMedia();
         }
 
         ResponseCache::flush();
@@ -163,7 +168,7 @@ class Post extends BaseModel implements Feedable
             ->summary($this->text)
             ->updated($this->updated_at)
             ->link(url(action('Front\PostsController@detail', $this->slug)))
-            ->author('Freek Van der Herten');
+            ->author('Zeshan Khattak');
     }
 
     public function concernsTweet(): bool

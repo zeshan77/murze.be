@@ -6,15 +6,9 @@
 
     @auth
         <div class="pb-4">
-            <a class="button" target="_blank" href="{{ action('Back\PostsController@edit', $post->id) }}">Edit</a>
+            <a class="button" target="_blank" href="{{ action('Back\PostsController@edit', $post->slug) }}">Edit</a>
         </div>
     @endauth
-
-    @if($ad)
-        <div class="bg-white border-2 rounded mb-4 py-4 px-6 mt-4 text-xs">
-            {!! $ad->text !!}
-        </div>
-    @endif
 
     <h1>{{ $post->formatted_title }}</h1>
 
@@ -26,19 +20,10 @@
         {!! $post->text !!}
     </div>
 
-    <div class="pt-4">
-        @include('front.posts._partials.tags')
-    </div>
-
-    <div class="pt-4">
-        @include('front.posts._partials.disqus')
-    </div>
-
-
 @endsection
 
 @section('seo')
-    <meta property="og:title" content="{{ $post->title }} | murze.be"/>
+    <meta property="og:title" content="{{ $post->title }} | zeshankhattak.com"/>
     <meta property="og:description" content="{{ $post->excerpt }}"/>
 
     @foreach($post->tags as $tag)
@@ -50,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:description" content="{{ $post->excerpt }}"/>
     <meta name="twitter:title" content="{{ $post->title }} | murze.be"/>
-    <meta name="twitter:site" content="@freekmurze"/>
-    <meta name="twitter:image" content="https://murze.be/images/avatar-boxed.jpg"/>
-    <meta name="twitter:creator" content="@freekmurze"/>
+    <meta name="twitter:site" content="@zeshan"/>
+    <meta name="twitter:image" content="https://zeshankhattak.com/images/zeshan.jpg"/>
+    <meta name="twitter:creator" content="@zeshan"/>
 @endsection

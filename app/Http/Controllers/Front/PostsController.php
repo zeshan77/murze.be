@@ -8,10 +8,13 @@ use Illuminate\Routing\Controller;
 
 class PostsController extends Controller
 {
+    public function index()
+    {
+        $posts = Post::latest()->get();
+        return view('front.posts.index', compact('posts'));
+    }
     public function detail(Post $post)
     {
-        $ad = Ad::getForCurrentPage();
-
         return view('front.posts.detail', compact('post', 'ad'));
     }
 }

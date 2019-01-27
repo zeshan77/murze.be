@@ -15,6 +15,7 @@ class NavigationServiceProvider extends ServiceProvider
                 ->addClass('list-reset lg:flex justify-end items-center')
                 ->addItemClass('block border-b-2 border-transparent py-2 px-4 text-center align-content-center lg:mx-2')
                 ->action('Front\HomeController@index', 'Home')
+                ->action('Front\PostsController@index', 'Posts')
                 ->action('Front\ProjectController@index', 'Projects')
                 ->action('Front\AboutMeController@index', 'About')
                 ->action('Front\ContactMeController@index', 'Contact')

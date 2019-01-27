@@ -30,7 +30,7 @@ class PostsController extends Controller
 
         flash()->success('Post saved');
 
-        return redirect()->action('Back\PostsController@edit', $post->id);
+        return redirect()->action('Back\PostsController@edit', $post->slug);
     }
 
     public function edit(Post $post)
@@ -44,7 +44,7 @@ class PostsController extends Controller
 
         flash()->success('Post updated');
 
-        return redirect()->action('Back\PostsController@edit', $post->id);
+        return redirect()->action('Back\PostsController@edit', $post->slug);
     }
 
     public function destroy(Post $post)
