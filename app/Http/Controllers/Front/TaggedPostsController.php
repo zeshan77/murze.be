@@ -7,10 +7,10 @@ use Spatie\Tags\Tag;
 
 class TaggedPostsController extends Controller
 {
-    public function index(Tag $tag)
+    public function index($tag)
     {
-        $posts = Post::published()
-            ->orderBy('publish_date', 'desc')
+        $tag = Tag::whereSlug($tag)->first();
+        $posts = Post::orderBy('created_at', 'desc')
             ->withAllTags([$tag])
             ->simplePaginate(50);
 
