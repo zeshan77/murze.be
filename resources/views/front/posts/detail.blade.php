@@ -20,9 +20,9 @@
         {!! $post->text !!}
     </div>
 
-    <div class="pt-4">
-        @include('front.posts._partials.tags')
-    </div>
+    {{--<div class="pt-4">--}}
+        {{--@include('front.posts._partials.tags')--}}
+    {{--</div>--}}
 
     <div class="pt-4">
         @include('front.posts._partials.disqus')
