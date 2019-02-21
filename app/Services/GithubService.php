@@ -42,7 +42,8 @@ class GithubService
             'IssuesEvent' => 'commented on ',
             'PullRequestEvent' => 'created pull request ',
             'ForkEvent' => 'forked ',
-            'CreateEvent' => 'created a repo '
+            'CreateEvent' => 'created a repo ',
+            'DeleteEvent' => 'deleted a repo '
         ];
     }
 
