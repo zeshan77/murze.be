@@ -43,7 +43,8 @@ class GithubService
             'PullRequestEvent' => 'created pull request ',
             'ForkEvent' => 'forked ',
             'CreateEvent' => 'created a repo ',
-            'DeleteEvent' => 'deleted a repo '
+            'DeleteEvent' => 'deleted a repo ',
+            'ReleaseEvent' => 'released new version ',
         ];
     }
 
