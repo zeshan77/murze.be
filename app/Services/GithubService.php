@@ -45,6 +45,7 @@ class GithubService
             'CreateEvent' => 'created a repo ',
             'DeleteEvent' => 'deleted a repo ',
             'ReleaseEvent' => 'released new version ',
+            'WatchEvent' => 'started watching repo ',
         ];
     }
 
